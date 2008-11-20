@@ -1,0 +1,8 @@
+#
+# created by: svn propset svn:externals -F ./EXTERNALS.TXT .
+#
+
+# kss.demo is needed for running selenium tests.
+# XXX use branch kss-test
+kss.demo https://codespeak.net/svn/kukit/kss.demo/branch/1.4-kss-test
+

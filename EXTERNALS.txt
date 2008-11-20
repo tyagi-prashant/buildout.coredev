@@ -1,0 +1,6 @@
+#
+# created by: svn propset svn:externals -F ./EXTERNALS.txt .
+#
+products https://svn.plone.org/svn/plone/bundles/3.1
+src https://svn.plone.org/svn/plone/buildouts/plone-coredev/branches/3.1/src
+
