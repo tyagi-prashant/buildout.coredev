@@ -2,6 +2,7 @@
 <project>
   <actions/>
   <description></description>
+<<<<<<< HEAD
   <displayName>Plone 4.2 – Test Coverage</displayName>
   <logRotator>
     <daysToKeep>30</daysToKeep>
@@ -9,6 +10,9 @@
     <artifactDaysToKeep>-1</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
   </logRotator>
+=======
+  <displayName>Plone 4.2 - Test Coverage</displayName>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
@@ -93,11 +97,15 @@ bin/jenkins-test-coverage</command>
       <regexpForRerun></regexpForRerun>
       <rerunIfUnstable>false</rerunIfUnstable>
       <checkRegexp>false</checkRegexp>
+<<<<<<< HEAD
       <delay class="com.chikli.hudson.plugin.naginator.ProgressiveDelay">
         <increment>300</increment>
         <max>10800</max>
       </delay>
       <maxSchedule>0</maxSchedule>
+=======
+      <debug>false</debug>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
     </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
   </publishers>
   <buildWrappers>

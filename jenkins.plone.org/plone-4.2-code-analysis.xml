@@ -2,9 +2,15 @@
 <project>
   <actions/>
   <description></description>
+<<<<<<< HEAD
   <displayName>Plone 4.2 – Code Analysis</displayName>
   <logRotator>
     <daysToKeep>30</daysToKeep>
+=======
+  <displayName>Plone 4.2 - Code Analysis</displayName>
+  <logRotator>
+    <daysToKeep>1</daysToKeep>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
     <numToKeep>-1</numToKeep>
     <artifactDaysToKeep>60</artifactDaysToKeep>
     <artifactNumToKeep>-1</artifactNumToKeep>
@@ -25,8 +31,12 @@
       <command>rm -rf bin parts .installed.cfg .mr.developer.cfg
 $PYTHON26 bootstrap.py
 bin/buildout -c jenkins.cfg
+<<<<<<< HEAD
 bin/jenkins-code-analysis
 bin/jenkins-code-analysis-flake8</command>
+=======
+bin/jenkins-code-analysis</command>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
     </hudson.tasks.Shell>
   </builders>
   <publishers>
@@ -87,6 +97,7 @@ bin/jenkins-code-analysis-flake8</command>
           <parserName>zptlint</parserName>
         </hudson.plugins.warnings.ParserConfiguration>
       </parserConfigurations>
+<<<<<<< HEAD
       <consoleParsers>
         <hudson.plugins.warnings.ConsoleParser>
           <parserName>zptlint</parserName>
@@ -95,6 +106,12 @@ bin/jenkins-code-analysis-flake8</command>
           <parserName>pyflakes</parserName>
         </hudson.plugins.warnings.ConsoleParser>
       </consoleParsers>
+=======
+      <consoleLogParsers>
+        <string>zptlint</string>
+        <string>pyflakes</string>
+      </consoleLogParsers>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
     </hudson.plugins.warnings.WarningsPublisher>
     <hudson.plugins.analysis.collector.AnalysisPublisher>
       <healthy></healthy>
@@ -278,7 +295,11 @@ bin/jenkins-code-analysis-flake8</command>
               <max>999</max>
               <unstable>999</unstable>
               <usePattern>false</usePattern>
+<<<<<<< HEAD
               <pattern>**/parts/jenkins-test/flake8.log</pattern>
+=======
+              <pattern></pattern>
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
             </hudson.plugins.violations.TypeConfig>
           </entry>
           <entry>
@@ -314,11 +335,14 @@ bin/jenkins-code-analysis-flake8</command>
       <regexpForRerun></regexpForRerun>
       <rerunIfUnstable>false</rerunIfUnstable>
       <checkRegexp>false</checkRegexp>
+<<<<<<< HEAD
       <delay class="com.chikli.hudson.plugin.naginator.ProgressiveDelay">
         <increment>300</increment>
         <max>10800</max>
       </delay>
       <maxSchedule>0</maxSchedule>
+=======
+>>>>>>> 11e96072d38202926951bee65e4f86958108103b
     </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
   </publishers>
   <buildWrappers/>
