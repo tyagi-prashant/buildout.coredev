@@ -1,8 +1,10 @@
+.coverage*
 .installed.cfg
 .mr.developer.cfg
 local.cfg
 bin
 develop-eggs
+eggs
 include
 lib
 local
