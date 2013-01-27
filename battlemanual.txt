@@ -1,0 +1,13 @@
+Hi,
+
+this is a clean slate for checking benchmarks.
+You choose a tag BUILDOUT_BATTLE and check the tag out.
+Create a virtualenv.
+Manually install pillow.
+Run Buildout.
+Run Tests with ``test bin/test``
+
+The tests must all pass. If this worked, add them to the
+results list. The results list is the same as the tag name,
+plus a .txt
+Numbers betweedn these different results have no meaning.
