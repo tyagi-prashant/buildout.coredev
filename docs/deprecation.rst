@@ -21,7 +21,7 @@ Help Programmers, No annoyance
 
 Deprecation has to support the consumers of the code - the programmers using it.
 From their point of view Plone core code is an API to them.
-Any change is annoying anyway, but the experience can be reduced if deprecation warning helps them.
+Any change is annoying to them anyway, but they feel better if deprecation warnings are telling them what to do.
 
 Deprecation always logs at level *warning* and answers the questions:
 
