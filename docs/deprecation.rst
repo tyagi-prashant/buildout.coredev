@@ -76,8 +76,8 @@ Python standard library offers a unified way for deprecation warnings in its `wa
         warnings.DeprecationWarning
     )
 
-Warnings are written to ``stderr`` by default.
-But ``DeprecationWarning``s output is surpressed by default.
+**stderr**: Warnings are written to ``stderr`` by default.
+But ``DeprecationWarning`` output is surpressed by default.
 Output can be enabled by starting the Python interpreter with the `-W [all|module|once] <https://docs.python.org/2/using/cmdline.html#cmdoption-W>`_ option. It is possible to enable output in code too:
 
 .. code-block:: python
@@ -85,7 +85,7 @@ Output can be enabled by starting the Python interpreter with the `-W [all|modul
     import warnings
     warnings.simplefilter("module")
 
-Once output is enabled it is possible to redirect it to the logger:
+**Logging**: Once output is enabled it is possible to `redirect warnings to the logger <https://docs.python.org/2/library/logging.html#logging.captureWarnings>`_:
 
 .. code-block:: python
 
@@ -97,7 +97,7 @@ Zope 2 and Deprecation
 
 .. warning::
 
-    There is a bug with Zope2 and Python 2.7 preventing ``DeprecationWarning``s shown up.
+    There is a bug with Zope < 2.13.23 together with Python 2.7+ preventing ``DeprecationWarning`` showing up.
 
 In ``zope.conf`` custom filters for warnings can be defined.
 
@@ -110,11 +110,13 @@ In ``zope.conf`` custom filters for warnings can be defined.
     </warnfilter>
     ...
 
-Using `plone.recipe.zope2instane <>`_ this can be generated using the recipe option ``deprecation-warnings = on``.
+Using `plone.recipe.zope2instane <https://pypi.python.org/pypi/plone.recipe.zope2instance>`_ this can be generated using the recipe option ``deprecation-warnings = on``.
 
 
 Helper Packages
 ---------------
+
+**ATTENTION: BELOW HERE WIP**
 
 Packages `zope.deprecation <https://pypi.python.org/pypi/zope.deprecation/>`_ and `zope.deferredimport <https://pypi.python.org/pypi/zope.deferredimport/>`_ are offering most of the needed functionality.
 
@@ -150,6 +152,3 @@ Deprecate a name in a module:
 from zope.deprecation.deprecation import deprecated
 from zope.deprecation.deprecation import deprecate
 from zope.deprecation.deprecation import moved
-
-https://docs.python.org/2/library/warnings.html
-https://docs.python.org/2/library/logging.html#logging.captureWarnings
