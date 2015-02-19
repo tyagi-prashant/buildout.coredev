@@ -19,7 +19,7 @@ This document describes best practices to be used in Plone Core.
 Help Programmers, No annoyance
 ------------------------------
 
-Deprecation has to support the consumers (programmers) of the code.
+Deprecation has to support the consumers of the code - the programmers using it.
 From their point of view Plone core code is an API to them.
 Any change is annoying anyway, but the experience can be reduced if deprecation warning helps them.
 
@@ -47,13 +47,13 @@ Renaming
 
 Moving a module, class, function, etc to another place
     For some reason, i.e. merging packages, consistent api or resolving cirular import problems, we need to move code around.
-    When imported from the old place it logs a verbose deprecationWarning with information where to import from in future.
+    When imported from the old place it logs a verbose deprecation warning with information where to import from in future.
 
 Deprecation of a whole package
     A whole package (folder with ``__init__.py``)
 
     - all imports still working, logging deprecation warnings on first import
-    - ZCML still exists, but is empty (or includes the zcml from the newplace if theres no auto import (i.e. for meta.zcml).
+    - ZCML still exists, but is empty (or includes the zcml from the new place if theres no auto import (i.e. for meta.zcml).
     - Not sure if we can raise/log deprecation warnings in this case
 
 Deprecation of a whole python egg
@@ -73,7 +73,7 @@ Python standard library offers a unified way for deprecation warnings in its `wa
 
     warnings.warn(
         "this is deprecated, better use ...",
-        warnings.DeprecationWarning
+        DeprecationWarning
     )
 
 **stderr**: Warnings are written to ``stderr`` by default.
